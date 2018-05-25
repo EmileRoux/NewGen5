@@ -2892,6 +2892,10 @@ th {
     max-width: 100%;
     margin-bottom: 20px
 }
+.table a
+{
+    font-size: 11px;
+}
 
     .table > thead > tr > th,
     .table > tbody > tr > th,
@@ -2935,6 +2939,7 @@ th {
 .table-condensed > tfoot > tr > td {
     padding: 5px
 }
+
 
 .table-bordered {
     border: 1px solid #ddd
@@ -3878,21 +3883,21 @@ fieldset[disabled] a.btn {
 
 .btn-primary {
     color: #fff;
-    background-color: #337ab7;
-    border-color: #2e6da4
+    background-color: #EF2C47;
+    border-color: #000
 }
 
     .btn-primary:focus,
     .btn-primary.focus {
         color: #fff;
-        background-color: #286090;
-        border-color: #122b40
+        background-color:#AD0E2C;
+        border-color: #000;
     }
 
     .btn-primary:hover {
         color: #fff;
-        background-color: #286090;
-        border-color: #204d74
+        background-color:  #AD0E2C;
+        border-color: #000
     }
 
     .btn-primary:active,
@@ -5255,7 +5260,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     }
 
     .navbar-brand > img {
-        display: block
+        /*display: block; */
+        height: 100%;
+        width: auto
     }
 
 @media (min-width: 768px) {
@@ -5600,7 +5607,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-default .navbar-link {
-    color: #777
+    color: #777;
+   
 }
 
     .navbar-default .navbar-link:hover {
@@ -5624,7 +5632,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     }
 
 .navbar-inverse {
-    background-color: #222;
+    background-color: #B00829;
     border-color: #080808
 }
 
@@ -5643,13 +5651,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     }
 
     .navbar-inverse .navbar-nav > li > a {
-        color: #9d9d9d
+        color: #fff;
     }
 
         .navbar-inverse .navbar-nav > li > a:hover,
         .navbar-inverse .navbar-nav > li > a:focus {
-            color: #fff;
-            background-color: transparent
+            /*color: #9d9d9d;*/
+            background-color: #EF2C47;
         }
 
     .navbar-inverse .navbar-nav > .active > a,

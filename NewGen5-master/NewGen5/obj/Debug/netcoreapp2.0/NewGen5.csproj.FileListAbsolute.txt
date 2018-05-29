@@ -1,0 +1,11 @@
+C:\Users\Dané Coetzee\Desktop\NewGen5-master\NewGen5\bin\Debug\netcoreapp2.0\NewGen5.deps.json
+C:\Users\Dané Coetzee\Desktop\NewGen5-master\NewGen5\bin\Debug\netcoreapp2.0\NewGen5.runtimeconfig.json
+C:\Users\Dané Coetzee\Desktop\NewGen5-master\NewGen5\bin\Debug\netcoreapp2.0\NewGen5.runtimeconfig.dev.json
+C:\Users\Dané Coetzee\Desktop\NewGen5-master\NewGen5\bin\Debug\netcoreapp2.0\NewGen5.dll
+C:\Users\Dané Coetzee\Desktop\NewGen5-master\NewGen5\bin\Debug\netcoreapp2.0\NewGen5.pdb
+C:\Users\Dané Coetzee\Desktop\NewGen5-master\NewGen5\obj\Debug\netcoreapp2.0\NewGen5.csprojResolveAssemblyReference.cache
+C:\Users\Dané Coetzee\Desktop\NewGen5-master\NewGen5\obj\Debug\netcoreapp2.0\NewGen5.csproj.CoreCompileInputs.cache
+C:\Users\Dané Coetzee\Desktop\NewGen5-master\NewGen5\obj\Debug\netcoreapp2.0\NewGen5.AssemblyInfoInputs.cache
+C:\Users\Dané Coetzee\Desktop\NewGen5-master\NewGen5\obj\Debug\netcoreapp2.0\NewGen5.AssemblyInfo.cs
+C:\Users\Dané Coetzee\Desktop\NewGen5-master\NewGen5\obj\Debug\netcoreapp2.0\NewGen5.dll
+C:\Users\Dané Coetzee\Desktop\NewGen5-master\NewGen5\obj\Debug\netcoreapp2.0\NewGen5.pdb

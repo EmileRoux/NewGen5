@@ -4,10 +4,36 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - NewGen5Screens</title>
+     <script type="text/javascript">$(document).ready(function() {
+            // Activate tooltip
+            $('[data-toggle="tooltip"]').tooltip();
+
+            // Select/Deselect checkboxes
+            var checkbox = $('table tbody input[type="checkbox"]');
+            $("#selectAll").click(function() {
+                if (this.checked) {
+                    checkbox.each(function() {
+                        this.checked = true;
+                    });
+                } else {
+                    checkbox.each(function() {
+                        this.checked = false;
+                    });
+                }
+            });
+            checkbox.click(function() {
+                if (!this.checked) {
+                    $("#selectAll").prop("checked", false);
+                }
+            });
+});</script>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -33,9 +59,9 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
 <!--                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
--->                    <li><a asp-area="" asp-controller="Home" asp-action="User">User</a></li>
+-->                    <li><a asp-area="" asp-controller="Home" asp-action="DisplayUser">User</a></li>
          <!--           <li><a asp-area="" asp-controller="Home" asp-action="AddVendor">Add Vendor</a></li>-->
-                     <li><a asp-area="" asp-controller="Home" asp-action="DisplayVendor"> Employee</a></li>
+                     <li><a asp-area="" asp-controller="Home" asp-action="DisplayEmployee"> Employee</a></li>
                      <li><a asp-area="" asp-controller="Home" asp-action="DisplayVendor"> Vendor</a></li>
                       <li><a asp-area="" asp-controller="Home" asp-action="Contact">Order</a></li>
                       <li><a asp-area="" asp-controller="Home" asp-action="Contact">Expense</a></li>
@@ -44,7 +70,16 @@
 
                        <li><a asp-area="" asp-controller="Home" asp-action="Contact">Service Providers</a></li>
                         <li><a asp-area="" asp-controller="Home" asp-action="Contact">Report</a></li>
-                         <li><a asp-area="" asp-controller="Home" asp-action="Contact">Other</a></li>
+                         <!--<li><a asp-area="" asp-controller="Home" asp-action="Contact">Other</a></li>-->
+                        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Other
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a asp-area="" asp-controller="Home" asp-action="Backup">Backup</a></li>
+          <li><a asp-area="" asp-controller="Home" asp-action="Restore">Restore</a></li>
+
+        </ul>
+      </li>
                         
                 </ul>
             </div>

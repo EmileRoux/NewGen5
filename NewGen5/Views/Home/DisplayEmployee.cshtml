@@ -2,7 +2,7 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
-ViewData["Title"] = "DisplayVendor";
+ViewData["Title"] = "DisplayEmployee";
 }
 
 
@@ -12,10 +12,11 @@ ViewData["Title"] = "DisplayVendor";
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-                        <h2>Manage Vendor</h2>
+                        <h2>Manage <b>Employees</b></h2>
                     </div>
                     <div class="col-sm-6">
-                        <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Vendor</span></a>
+                        <a href="#addEmployeeRequestModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add Employee Request</span></a>
+                        <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Employee</span></a>
                         <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>
                     </div>  
                 </div>
@@ -29,22 +30,17 @@ ViewData["Title"] = "DisplayVendor";
                                 <label for="selectAll"></label>
                             </span>
                         </th>
-                        <th> Vendor ID</th>
-                        <th>Vendor Name</th>
-                       <th>Phone number</th>
+                        <th>ID</th>
+                        <th>First Name</th>
+                        <th>Surname</th>
+                        <th>Initials</th>
+                        <th>ID Number</th>
+                        <th>Work Telephone</th>
                         <th>Email</th>
-                        <th>Field of Expertise</th>
-                        <th>VAT number</th>
-                   
-                        <th>Account Number</th>
-
-                        <th>Branch Code</th>
+                        <th>Cell Phone</th>
                         <th>Physical Address</th>
                         <th>Postal Address</th>
                         <td>Actions</td>
-
- 
-                    
                     </tr>
                 </thead>
                 <tbody>
@@ -56,9 +52,9 @@ ViewData["Title"] = "DisplayVendor";
                             </span>
                         </td>
                         <td>1</td>
-                        <td>xxxxxxxxx</td>
-                        <td>xxxxxxxxx</td>
-                        <td>xxxxxxxxx</td>
+                        <td>Julian</td>
+                        <td>Rehbock</td>
+                        <td>J</td>
                         <td>xxxxxxxx</td>
                         <td>xxxxxxxx</td>
                         <td>xxxxxxxx</td>
@@ -71,8 +67,6 @@ ViewData["Title"] = "DisplayVendor";
                         <td>
                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                             <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                             <a href="" class="preferred" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Mark as Preferred">&#xe885;</i></a>
-
                         </td>
                     </tr>
                     <tr>
@@ -83,9 +77,9 @@ ViewData["Title"] = "DisplayVendor";
                             </span>
                         </td>
                         <td>2</td>
-                        <td>xxxxxxxxx</td>
-                        <td>xxxxxxxxx</td>
-                        <td>xxxxxxxxx</td>
+                        <td>Emile</td>
+                        <td>Roux</td>
+                        <td>E</td>
                         <td>xxxxxxxx</td>
                         <td>xxxxxxxx</td>
                         <td>xxxxxxxx</td>
@@ -96,8 +90,6 @@ ViewData["Title"] = "DisplayVendor";
                         <td>
                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                             <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-
-                             <a href="" class="preferred" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Mark as Preferred">&#xe885;</i></a>
                         </td>
                     </tr>
                     <tr>
@@ -108,9 +100,9 @@ ViewData["Title"] = "DisplayVendor";
                             </span>
                         </td>
                         <td>3</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
+                        <td>Geroge</td>
+                        <td>Nichas</td>
+                        <td>G</td>
                         <td>xxxxxxxx</td>
                         <td>xxxxxxxx</td>
                         <td>xxxxxxxx</td>
@@ -121,8 +113,6 @@ ViewData["Title"] = "DisplayVendor";
                         <td>
                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                             <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-
-                             <a href="" class="preferred" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Mark as Preferred">&#xe885;</i></a>
                         </td>
                     </tr>
                     <tr>
@@ -133,9 +123,9 @@ ViewData["Title"] = "DisplayVendor";
                             </span>
                         </td>
                         <td>4</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
+                        <td>Emily</td>
+                        <td>Black</td>
+                        <td>E</td>
                         <td>xxxxxxxx</td>
                         <td>xxxxxxxx</td>
                         <td>xxxxxxxx</td>
@@ -146,8 +136,6 @@ ViewData["Title"] = "DisplayVendor";
                         <td>
                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                             <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-
-                             <a href="" class="preferred" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Mark as Preferred">&#xe885;</i></a>
                         </td>
                     </tr>
                     <tr>
@@ -158,9 +146,9 @@ ViewData["Title"] = "DisplayVendor";
                             </span>
                         </td>
                         <td>5</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
+                        <td>Dane</td>
+                        <td>Coetzee</td>
+                        <td>D</td>
                         <td>xxxxxxxx</td>
                         <td>xxxxxxxx</td>
                         <td>xxxxxxxx</td>
@@ -171,8 +159,6 @@ ViewData["Title"] = "DisplayVendor";
                         <td>
                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                             <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-
-                             <a href="" class="preferred" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Mark as Preferred">&#xe885;</i></a>
                         </td>                      
                     </tr>
                 </tbody>

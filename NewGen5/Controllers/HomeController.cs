@@ -40,6 +40,30 @@ namespace NewGen5.Controllers
 
             return View();
         }
+        public IActionResult DisplayEmployee()
+        {
+            ViewData["Message"] = "Your application description page.";
+
+            return View();
+        }
+        public IActionResult DisplayUser()
+        {
+            ViewData["Message"] = "Your application description page.";
+
+            return View();
+        }
+        public IActionResult Backup()
+        {
+            ViewData["Message"] = "Your application description page.";
+
+            return View();
+        }
+        public IActionResult Restore()
+        {
+            ViewData["Message"] = "Your application description page.";
+
+            return View();
+        }
 
 
         public IActionResult Error()

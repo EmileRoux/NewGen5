@@ -64,6 +64,20 @@ namespace NewGen5.Controllers
 
             return View();
         }
+        public IActionResult Order()
+        {
+            ViewData["Message"] = "Your application description page.";
+
+            return View();
+        }
+        public IActionResult Expenses()
+        {
+            ViewData["Message"] = "Your application description page.";
+
+            return View();
+        }
+
+
 
 
         public IActionResult Error()

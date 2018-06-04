@@ -14,7 +14,7 @@ ViewData["Title"] = "DisplayServiceProvider";
                     </div>
                 
                     <div class="col-sm-6">
-                        <a href="reviewModal" class="btn btn-info" data-toggle="modal"><i class="material-icons">&#xe560;</i> <span>Capture Review</span></a>
+                        <a href="#reviewModal" class="btn btn-info" data-toggle="modal"><i class="material-icons">&#xe560;</i> <span>Capture Review</span></a>
                         <a href="#addServiceProviderModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>New Service Provider</span></a>
                         <a href="#deleteServiceProviderModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>
 
@@ -69,7 +69,7 @@ ViewData["Title"] = "DisplayServiceProvider";
                         <td>
                             <a href="#editServiceProviderModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                             <a href="#deleteServiceProviderModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                            <a href="" class="preferred" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Preference">&#xe885;</i></a>
+                            <a href="#preferredModal" class="preferred" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Preference">&#xe885;</i></a>
                         </td>
                     </tr>
                     <tr>
@@ -90,7 +90,7 @@ ViewData["Title"] = "DisplayServiceProvider";
                         <td>
                             <a href="#editServiceProviderModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                             <a href="#deleteServiceProviderModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                            <a href="" class="preferred" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Preference">&#xe885;</i></a>
+                            <a href="#preferredModal" class="preferred" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Preference">&#xe885;</i></a>
                         </td>
                     </tr>
                     <tr>
@@ -112,7 +112,7 @@ ViewData["Title"] = "DisplayServiceProvider";
                             <a href="#editServiceProviderModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                             <a href="#deleteServiceProviderModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
 
-                            <a href="" class="preferred" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Preference">&#xe885;</i></a>
+                            <a href="#preferredModal" class="preferred" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Preference">&#xe885;</i></a>
                        </td>
                     </tr>
                     <tr>
@@ -134,7 +134,7 @@ ViewData["Title"] = "DisplayServiceProvider";
                             <a href="#editServiceProviderModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                             <a href="#deleteServiceProviderModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
 
-                            <a href="" class="preferred" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Preference">&#xe885;</i></a>
+                            <a href="#preferredModal" class="preferred" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Preference">&#xe885;</i></a>
                        </td>
                     </tr>
                     <tr>
@@ -156,7 +156,7 @@ ViewData["Title"] = "DisplayServiceProvider";
                             <a href="#editServiceProviderModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                             <a href="#deleteServiceProviderModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
 
-                            <a href="" class="preferred" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Preference">&#xe885;</i></a>
+                            <a href="#preferredModal" class="preferred" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Preference">&#xe885;</i></a>
                         </td>
                     </tr>
                 </tbody>
@@ -286,6 +286,77 @@ ViewData["Title"] = "DisplayServiceProvider";
             </div>
         </div>
     </div>
+
+
+      <!-- Capture Review Modal HTML -->
+
+    <div id="reviewModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">
+                        <h4 class="modal-title">Capture Review</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                        <label>Service Provider ID: xx </label>
+                    </div>
+                        <div class="form-group">
+                            <label>Review</label>
+                           <textarea rows="3" class="form-control"></textarea>
+                    </div>
+
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                        <input type="submit" class="btn btn-success" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+     <!-- Preferred Modal HTML -->
+
+    <div id="preferredModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">
+                        <h4 class="modal-title">Preference Type</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        
+                        <div class="form-group">
+                            <label>Mark as</label>
+                            <select class="form-control">
+                            <option>Preferred</option>
+                            <option>Blacklisted</option>
+
+
+                        </select>
+                        </div>
+
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                        <input type="submit" class="btn btn-success" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+  
+
+
     <!-- Blacklist Modal HTML -->
     <div id="blacklistServiceProviderModal" class="modal fade">
         <div class="modal-dialog">

@@ -32,7 +32,7 @@
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="~/css/icon.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     </environment>
     <environment exclude="Development">
@@ -57,7 +57,7 @@
                 </a>
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav mr-auto">
 <!--                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
 -->                    <li><a asp-area="" asp-controller="Home" asp-action="DisplayUser">User</a></li>
          <!--           <li><a asp-area="" asp-controller="Home" asp-action="AddVendor">Add Vendor</a></li>-->
@@ -66,10 +66,39 @@
                       <li><a asp-area="" asp-controller="Home" asp-action="Order">Order</a></li>
                       <li><a asp-area="" asp-controller="Home" asp-action="Expenses">Expense</a></li>
 
-                      <li><a asp-area="" asp-controller="Home" asp-action="Contact">Quote</a></li>
+                       <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Quotes
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a asp-area="" asp-controller="Home" asp-action="DisplayQuotes">Manage Quotes</a></li>
+          <li><a asp-area="" asp-controller="Home" asp-action="QuoteType">Manage Quote Types</a></li>
 
-                       <li><a asp-area="" asp-controller="Home" asp-action="Contact">Service Providers</a></li>
-                        <li><a asp-area="" asp-controller="Home" asp-action="Contact">Report</a></li>
+        </ul>
+      </li>
+
+                        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Service Provider
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a asp-area="" asp-controller="Home" asp-action="DisplayServiceProvider">Manage Service Providers</a></li>
+          <li><a asp-area="" asp-controller="Home" asp-action="ServiceProviderTypes">Manage Service Provider Types</a></li>
+          <li><a asp-area="" asp-controller="Home" asp-action="ExchangeRate">Retrieve Exchange Rate </a></li>
+
+        </ul>
+      </li>
+                            <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Report
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a asp-area="" asp-controller="Home" asp-action="UserReport">User</a></li>
+          <li><a asp-area="" asp-controller="Home" asp-action="VendorReport">Vendor</a></li>
+          <li><a asp-area="" asp-controller="Home" asp-action="ExpenseReport">Expense</a></li>
+          <li><a asp-area="" asp-controller="Home" asp-action="OrderReport">Order</a></li>
+          <li><a asp-area="" asp-controller="Home" asp-action="DepartmentBudgetReport">Department Budget Spent</a></li>
+          <li><a asp-area="" asp-controller="Home" asp-action="ServiceProviderReport">Service Provider </a></li>
+
+        </ul>
+      </li>
                          <!--<li><a asp-area="" asp-controller="Home" asp-action="Contact">Other</a></li>-->
                         <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Other
@@ -81,6 +110,11 @@
         </ul>
       </li>
                         
+                        
+                </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                  
+                     <li title="Log out"><a href="#"><i class="material-icons" style="font-size: 20px">&#xe8ac;</i></a></li>
                 </ul>
             </div>
         </div>

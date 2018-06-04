@@ -76,6 +76,75 @@ namespace NewGen5.Controllers
 
             return View();
         }
+        public IActionResult DisplayQuotes()
+        {
+            ViewData["Message"] = "Your application description page.";
+
+            return View();
+        }
+        public IActionResult QuoteType()
+        {
+            ViewData["Message"] = "Your application description page.";
+
+            return View();
+        }
+        public IActionResult DisplayServiceProvider()
+        {
+            ViewData["Message"] = "Your application description page.";
+
+            return View();
+        }
+        public IActionResult ServiceProviderTypes()
+        {
+            ViewData["Message"] = "Your application description page.";
+
+            return View();
+        }
+        public IActionResult ExchangeRate()
+        {
+            ViewData["Message"] = "Your application description page.";
+
+            return View(); 
+        }
+        public IActionResult UserReport()
+        {
+            ViewData["Message"] = "Your application description page.";
+
+            return View();
+        }
+        public IActionResult VendorReport()
+        {
+            ViewData["Message"] = "Your application description page.";
+
+            return View();
+        }
+        public IActionResult ExpenseReport()
+        {
+            ViewData["Message"] = "Your application description page.";
+
+            return View();
+        }
+        public IActionResult OrderReport()
+        {
+            ViewData["Message"] = "Your application description page.";
+
+            return View();
+        }
+        public IActionResult DepartmentBudgetReport()
+        {
+            ViewData["Message"] = "Your application description page.";
+
+            return View();
+        }
+        public IActionResult ServiceProviderReport()
+        {
+            ViewData["Message"] = "Your application description page.";
+
+            return View();
+        }
+
+
+
 
 
 

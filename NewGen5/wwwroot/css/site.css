@@ -94,7 +94,8 @@
 table.table tr th, table.table tr td {
     border-color: #e9e9e9;
     padding: 12px 15px;
-    vertical-align: middle
+    vertical-align: middle;
+    font-size: 12px;
 }
 
     table.table tr th:first-child {
@@ -436,6 +437,7 @@ table.table .avatar {
 .search-container {
     float: right;
     margin-top: 20px;
+
 }
 
 .search-container input[type=text] {
@@ -460,11 +462,11 @@ table.table .avatar {
     }
 
 @media screen and (max-width: 600px) {
-     .search-container {
+    .search-container {
         float: none
     }
 
-.search-container input[type=text],  .search-container button {
+        .search-container input[type=text], .search-container button {
             float: none;
             display: block;
             text-align: left;
@@ -473,6 +475,67 @@ table.table .avatar {
             padding: 14px
         }
 
-    .search-container input[type=text] {
-        border: 1px solid #ccc
+        .search-container input[type=text] {
+            border: 1px solid #ccc
+        }
+
+    .material-icons i:hover {
+        color: B00829
     }
+
+    .search-box {
+        position: relative;
+        float: right
+    }
+
+        .search-box .input-group {
+            min-width: 100px;
+            position: absolute;
+            right: 0
+        }
+
+        .search-box .input-group-addon, .search-box input {
+            border-color: #ddd;
+            border-radius: 0
+        }
+
+        .search-box input {
+            height: 30px;
+            padding-right: 35px;
+            background: #f4fcfd;
+            border: none;
+            border-radius: 2px !important
+        }
+
+            .search-box input:focus {
+                background: #fff
+            }
+
+            .search-box input::placeholder {
+                font-style: italic
+            }
+
+        .search-box .input-group-addon {
+            min-width: 35px;
+            border: none;
+            background: transparent;
+            position: absolute;
+            right: 0;
+            z-index: 9;
+            padding: 6px 0
+        }
+
+        .search-box i {
+            color: #a0a5b1;
+            font-size: 14px;
+            position: relative;
+            top: 2px
+        }
+
+    .form-inline > * {
+        margin: 15px 6px !important
+    }
+
+
+
+   

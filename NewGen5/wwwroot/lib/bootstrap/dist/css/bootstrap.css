@@ -5458,7 +5458,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-nav > li > .dropdown-menu {
     margin-top: 0;
     border-top-left-radius: 0;
-    border-top-right-radius: 0
+    border-top-right-radius: 0;
+    background-color: #B00829
 }
 
 .navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {
@@ -5466,7 +5467,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0
+    border-bottom-left-radius: 0;
+
 }
 
 .navbar-btn {

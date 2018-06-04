@@ -17,14 +17,26 @@ ViewData["Title"] = "Order";
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
-                    <div class="col-sm-6">
-                        <h2>Manage Vendor</h2>
+                    <div class="col-sm-3">
+                        <h2>Manage Order</h2>
                     </div>
                     <div class="col-sm-6">
-                        <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Vendor</span></a>
-                        <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>
-                    </div>  
+                        <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Place Order</span></a>
+                       
+                    <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>
+                     <a href="#finaliseinvoiceModal" class="btn btn-info" data-toggle="modal"><i class="material-icons">&#xe227;</i> <span>Finalise Invoice</span></a>
+                       
                 </div>
+                <div class="col-sm-3">
+                <div class="search-box">
+                                <div class="input-group">                               
+                                    <input type="text" id="search" class="form-control" placeholder="Search Order">
+                                    <span class="input-group-addon" style="font-size:14px;"><i class="material-icons">&#xE8B6;</i></span>
+                                  </div>
+                        </div>
+                </div>
+                </div>
+            </div>
             </div>
             <table class="table table-striped table-hover">
                 <thead>
@@ -35,18 +47,18 @@ ViewData["Title"] = "Order";
                                 <label for="selectAll"></label>
                             </span>
                         </th>
-                        <th> Vendor ID</th>
-                        <th>Vendor Name</th>
-                       <th>Phone number</th>
-                        <th>Email</th>
-                        <th>Field of Expertise</th>
-                        <th>VAT number</th>
+                        <th> Order ID</th>
+                        <th>Expense ID</th>
+                       <th>Quantity</th>
+                        <th>Date</th>
+                        <th>Type</th>
+                        <th>Description</th>
                    
-                        <th>Account Number</th>
-
+                        <th>Status</th>
+<!--
                         <th>Branch Code</th>
                         <th>Physical Address</th>
-                        <th>Postal Address</th>
+                        <th>Postal Address</th>-->
                         <td>Actions</td>
 
  
@@ -68,16 +80,17 @@ ViewData["Title"] = "Order";
                         <td>xxxxxxxx</td>
                         <td>xxxxxxxx</td>
                         <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
+
 
 
                            
                         <td>
                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                             <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                             <a href="" class="preferred" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Mark as Preferred">&#xe885;</i></a>
+                             <a href="" class="finaliseorder" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Finalise Order">&#xe876;</i></a>
+                             <a href="" class="receiveorder" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Receive Order"> &#xe861;</i></a>
+
+                   
 
                         </td>
                     </tr>
@@ -95,16 +108,15 @@ ViewData["Title"] = "Order";
                         <td>xxxxxxxx</td>
                         <td>xxxxxxxx</td>
                         <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
+
 
                         <td>
                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                             <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
 
-                             <a href="" class="preferred" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Mark as Preferred">&#xe885;</i></a>
-                        </td>
+                             <a href="" class="finaliseorder" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Finalise Order">&#xe876;</i></a>
+                             <a href="" class="receiveorder" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Receive Order"> &#xe861;</i></a>
+                </td>
                     </tr>
                     <tr>
                         <td>
@@ -120,16 +132,15 @@ ViewData["Title"] = "Order";
                         <td>xxxxxxxx</td>
                         <td>xxxxxxxx</td>
                         <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
+
                       
                         <td>
                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                             <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                             <a href="" class="finaliseorder" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Finalise Order">&#xe876;</i></a>
+                             <a href="" class="receiveorder" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Receive Order"> &#xe861;</i></a>
 
-                             <a href="" class="preferred" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Mark as Preferred">&#xe885;</i></a>
-                        </td>
+                             </td>
                     </tr>
                     <tr>
                         <td>
@@ -145,16 +156,14 @@ ViewData["Title"] = "Order";
                         <td>xxxxxxxx</td>
                         <td>xxxxxxxx</td>
                         <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                      
+
                         <td>
                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                             <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                                         <a href="" class="finaliseorder" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Finalise Order">&#xe876;</i></a>
+                             <a href="" class="receiveorder" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Receive Order"> &#xe861;</i></a>
 
-                             <a href="" class="preferred" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Mark as Preferred">&#xe885;</i></a>
-                        </td>
+                            </td>
                     </tr>
                     <tr>
                         <td>
@@ -170,16 +179,15 @@ ViewData["Title"] = "Order";
                         <td>xxxxxxxx</td>
                         <td>xxxxxxxx</td>
                         <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
+
                        
                         <td>
                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                             <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
 
-                             <a href="" class="preferred" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Mark as Preferred">&#xe885;</i></a>
-                        </td>                      
+                              <a href="" class="finaliseorder" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Finalise Order">&#xe876;</i></a>
+                             <a href="" class="receiveorder" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Receive Order"> &#xe861;</i></a>
+                </td>                      
                     </tr>
                 </tbody>
             </table>

@@ -5,26 +5,31 @@ ViewData["Title"] = "Expenses";
 
 
     <div class="container">
-   <div class="row"> 
-        <div class="search-container">
-    <input type="text" placeholder="Search.." name="search">
-      <button type="submit"><i class="fa fa-search"></i></button>
-               
-    </div>
-     
-     </div>
+
     <div class="row">
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
-                    <div class="col-sm-6">
-                        <h2>Manage Vendor</h2>
+                    <div class="col-sm-3">
+                        <h2>Manage Expenses</h2>
                     </div>
                     <div class="col-sm-6">
-                        <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Vendor</span></a>
+                        <a href="#addEmployeeModal" class="btn btn-info" data-toggle="modal"><i class="material-icons">&#xe227;</i> <span>Finalise Reimbursement</span></a>
                         <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>
 
-                </div>  
+                </div>
+
+                    <div class="col-sm-3">
+                <div class="search-box">
+                                <div class="input-group">                               
+                                    <input type="text" id="search" class="form-control" placeholder="Search Expense">
+                                    <span class="input-group-addon" style="font-size:14px;"><i class="material-icons">&#xE8B6;</i></span>
+                                  </div>
+                        </div>
+                </div>
+                </div>
+                
+                    
                 </div>
             </div>
             <table class="table table-striped table-hover">
@@ -36,19 +41,15 @@ ViewData["Title"] = "Expenses";
                                 <label for="selectAll"></label>
                             </span>
                         </th>
-                        <th> Vendor ID</th>
-                        <th>Vendor Name</th>
-                       <th>Phone number</th>
-                        <th>Email</th>
-                        <th>Field of Expertise</th>
-                        <th>VAT number</th>
-                   
-                        <th>Account Number</th>
-
-                        <th>Branch Code</th>
-                        <th>Physical Address</th>
-                        <th>Postal Address</th>
-                        <td>Actions</td>
+                        <th> Expense ID</th>
+                        <th>Expense Type</th>
+                       <th> Name</th>
+                        <th>Amount </th>
+                        <th>Status</th>
+                          <th>VAT number</th>
+                    <th>Reimbursement ID</th>
+                     <th>Order ID </th>
+                      <td>Actions</td>
 
  
                     
@@ -70,15 +71,15 @@ ViewData["Title"] = "Expenses";
                         <td>xxxxxxxx</td>
                         <td>xxxxxxxx</td>
                         <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
 
 
                            
                         <td>
-                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                             <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                             <a href="" class="preferred" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Mark as Preferred">&#xe885;</i></a>
+                             
+
+                             <a href="" class="viewrstatus" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="View Reimbursement Status">&#xe417;</i></a>
+                             <a href="" class="approveexpense" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Approve Expense">&#xe876;</i></a>
 
                         </td>
                     </tr>
@@ -97,14 +98,14 @@ ViewData["Title"] = "Expenses";
                         <td>xxxxxxxx</td>
                         <td>xxxxxxxx</td>
                         <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
+
 
                         <td>
-                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                           <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                             
 
-                             <a href="" class="preferred" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Mark as Preferred">&#xe885;</i></a>
+                             <a href="" class="viewrstatus" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="View Reimbursement Status">&#xe417;</i></a>
+                             <a href="" class="approveexpense" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Approve Expense">&#xe876;</i></a>
                         </td>
                     </tr>
                     <tr>
@@ -122,14 +123,13 @@ ViewData["Title"] = "Expenses";
                         <td>xxxxxxxx</td>
                         <td>xxxxxxxx</td>
                         <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                      
-                        <td>
-                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
 
-                             <a href="" class="preferred" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Mark as Preferred">&#xe885;</i></a>
+                        <td>
+                           <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                             
+
+                             <a href="" class="viewrstatus" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="View Reimbursement Status">&#xe417;</i></a>
+                             <a href="" class="approveexpense" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Approve Expense">&#xe876;</i></a>
                         </td>
                     </tr>
                     <tr>
@@ -147,14 +147,13 @@ ViewData["Title"] = "Expenses";
                         <td>xxxxxxxx</td>
                         <td>xxxxxxxx</td>
                         <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                      
-                        <td>
-                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
 
-                             <a href="" class="preferred" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Mark as Preferred">&#xe885;</i></a>
+                        <td>
+                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                             
+
+                             <a href="" class="viewrstatus" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="View Reimbursement Status">&#xe417;</i></a>
+                             <a href="" class="approveexpense" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Approve Expense">&#xe876;</i></a>
                         </td>
                     </tr>
                     <tr>
@@ -172,14 +171,14 @@ ViewData["Title"] = "Expenses";
                         <td>xxxxxxxx</td>
                         <td>xxxxxxxx</td>
                         <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
+
                        
                         <td>
-                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                             <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                             
 
-                             <a href="" class="preferred" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Mark as Preferred">&#xe885;</i></a>
+                             <a href="" class="viewrstatus" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="View Reimbursement Status">&#xe417;</i></a>
+                             <a href="" class="approveexpense" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Approve Expense">&#xe876;</i></a>
                         </td>                      
                     </tr>
                 </tbody>
@@ -378,6 +377,5 @@ ViewData["Title"] = "Expenses";
             </div>
         </div>
     </div>
- </div>
-
+ 
  

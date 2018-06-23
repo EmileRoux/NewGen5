@@ -142,6 +142,13 @@ namespace NewGen5.Controllers
 
             return View();
         }
+        public IActionResult Register()
+        {
+            ViewData["Message"] = "Your application description page.";
+
+            return View();
+        }
+
 
 
 

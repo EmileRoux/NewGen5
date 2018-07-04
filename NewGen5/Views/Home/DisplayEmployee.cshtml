@@ -250,7 +250,7 @@ ViewData["Title"] = "DisplayEmployee";
         </div>
     </div>
     <!--Add Employee Request-->
-    <div id="addEmployeeRequestModal" class="modal fade">
+    <!--<div id="addEmployeeRequestModal" class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">
                 <form>
@@ -293,7 +293,7 @@ ViewData["Title"] = "DisplayEmployee";
                 </form>
             </div>
         </div>
-    </div>
+    </div>-->
     <!-- Edit Modal HTML -->
     <div id="editEmployeeModal" class="modal fade">
         <div class="modal-dialog">
@@ -379,3 +379,117 @@ ViewData["Title"] = "DisplayEmployee";
         </div>
     </div>
  
+ <div id="addEmployeeRequestModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">
+                        <h4 class="modal-title">Add Employee Request</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="form-group">
+                            <label>Employee ID</label>
+                        <input type="text" class="form-control" readonly="true" value="1">
+                        </div>
+                    <div align="center">
+                          <div class="btn-info btn-group btn-group-toggle" data-toggle="buttons">
+  <label class="btn btn-secondary active">
+    <input type="radio" name="options" class="form-control" id="option1" autocomplete="off" checked>Stationary
+  </label>
+  <label class="btn btn-secondary">
+    <input type="radio" name="options" class="form-control" id="option2" autocomplete="off"> Consumables
+  </label>
+   <label class="btn btn-secondary">
+    <input type="radio" name="options" class="form-control" id="option2" autocomplete="off"> Reimbursement
+  </label>
+
+
+</div>
+                        </div>
+
+                    <div class="form-group">
+                            <label>Type</label>
+                            <select class="form-control">
+                            <option>Accomodation</option>
+                            <option>Plane Ticket</option>
+                            <option>----</option>
+                             <option>Pencil</option>
+                             <option>Pen</option>
+                             <option>----</option>
+                             <option>Printer Catridge</option>
+                             <option>Coffee</option>
+                            
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Description</label>
+                            <textarea class="form-control" rows="3" id="comment"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Quantity</label>
+                            <input type="number" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Date</label>
+                            <input type="date" class="form-control" required>
+                        </div>
+                    <hr/>
+                    <p class="text-muted"><small>* Also complete if reimbursement</small></p>
+                    <div class="form-group">
+                    <label>Reimbursement Amount</label>
+                        <input type="number" class="form-control"/>
+
+                    </div>
+                     <div class="form-group">
+                            <label>Proof of Payment</label>
+                            <input type="file" class="form-control">
+                        </div>
+                   
+                    <div class="from-group">
+                        <a class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i></a>
+                       
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <br/>
+                    <label><b>Line Items</b></label>
+                        <table class="table table-sm">
+                            <tr>
+                            <th>S/C/R</th>
+                            <th>Type</th>
+                            <th>Quantity</th>
+                            <th>Amount</th>
+                                </tr>
+                            <tr>
+                                <td>S</td>
+                                <td>Pencil</td>
+                                <td>5</td>
+                                <td>-</td>
+                             </tr>
+                            <tr>
+                                <td>R</td>
+                                <td>Accomodation</td>
+                                <td>1</td>
+                                <td>1200</td>
+                             </tr>
+                          
+                        </table>
+
+                    </div>
+                    
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                        <input type="submit" class="btn btn-success" value="Place Request">
+                    </div>
+                 
+                </form>
+            </div>
+        </div>
+    </div>
+                       
+
+

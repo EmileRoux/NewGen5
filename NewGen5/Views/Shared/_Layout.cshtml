@@ -61,10 +61,28 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav mr-auto">
-<!--                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
--->                    <li><a asp-area="" asp-controller="Home" asp-action="DisplayUser">User</a></li>
-         <!--           <li><a asp-area="" asp-controller="Home" asp-action="AddVendor">Add Vendor</a></li>-->
-                     <li><a asp-area="" asp-controller="Home" asp-action="DisplayEmployee"> Employee</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="DisplayUser">User</a></li>
+
+                        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Employee
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a asp-area="" asp-controller="Home" asp-action="DisplayEmployee">Manage Employees</a></li>
+          <li><a asp-area="" asp-controller="Home" asp-action="RequestStatus">Employee Request Status</a></li>
+           <li><a asp-area="" asp-controller="Home" asp-action="AssignDepartmentBudget">Assign Department Budget</a></li>
+
+                                
+
+        </ul>
+      </li>
+                        
+                   
+                        
+                      
+
+
+                        
+                        <li><a asp-area="" asp-controller="Home" asp-action="DisplayReimbursements"> Reimbursements</a></li>
 
 
                         

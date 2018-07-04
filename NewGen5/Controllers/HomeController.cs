@@ -148,6 +148,26 @@ namespace NewGen5.Controllers
 
             return View();
         }
+        public IActionResult DisplayReimbursements()
+        {
+            ViewData["Message"] = "Your application description page.";
+
+            return View();
+        }
+        public IActionResult RequestStatus()
+        {
+            ViewData["Message"] = "Your application description page.";
+
+            return View();
+        }
+        public IActionResult AssignDepartmentBudget()
+        {
+            ViewData["Message"] = "Your application description page.";
+
+            return View();
+        }
+
+
 
 
 

@@ -29,7 +29,7 @@ ViewData["Title"] = "DisplayServiceProvider";
                     </div>
                 </div>
             </div>
-            <table class="table table-striped table-hover">
+            <table class="table table-striped table-hover table-sm">
                 <thead>
                     <tr>
                         <th>
@@ -43,8 +43,8 @@ ViewData["Title"] = "DisplayServiceProvider";
                         <th>Email</th>
                         <th>Phone Number</th>
                         <th>Physical Address</th>
-                        <th>Field Of Expertise</th>
-                        <th>Account Number</th>
+                        <th>Type</th>
+                        <th>Country</th>
 
                         <td>Actions</td>
                     </tr>
@@ -58,12 +58,12 @@ ViewData["Title"] = "DisplayServiceProvider";
                             </span>
                         </td>
                         <td>1</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
+                        <td>Avis</td>
+                        <td>info@avis.co.za</td>
+                        <td>0112871233 </td>
+                        <td>Oxford Rd, Rosebank</td>
+                        <td>Car Rental</td>
+                        <td>South Africa</td>
 
                         <td>
                             <a href="#editServiceProviderModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
@@ -81,12 +81,12 @@ ViewData["Title"] = "DisplayServiceProvider";
                             </span>
                         </td>
                         <td>2</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
+                        <td>Safair</td>
+                        <td>bookings@safair.com</td>
+                        <td>0114425692</td>
+                        <td>Perimeter Rd, Bonaero Park</td>
+                        <td>Airline</td>
+                        <td>South Africa</td>
 
                         <td>
                             <a href="#editServiceProviderModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
@@ -104,12 +104,12 @@ ViewData["Title"] = "DisplayServiceProvider";
                             </span>
                         </td>
                         <td>3</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
+                        <td>Protea Hotel</td>
+                        <td>info@protea.co.za</td>
+                        <td>0114432448</td>
+                        <td>Maude St, Sandown</td>
+                        <td>Hotel</td>
+                        <td>South Africa</td>
 
                         <td>
                             <a href="#editServiceProviderModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
@@ -128,12 +128,12 @@ ViewData["Title"] = "DisplayServiceProvider";
                             </span>
                         </td>
                         <td>4</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
+                        <td>South African Airways</td>
+                        <td>bookings@saa.co.za</td>
+                        <td>0114432365</td>
+                        <td>OR Thambo International Airport</td>
+                        <td>Airline</td>
+                        <td>South Africa</td>
 
                         <td>
                             <a href="#editServiceProviderModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
@@ -152,12 +152,12 @@ ViewData["Title"] = "DisplayServiceProvider";
                             </span>
                         </td>
                         <td>5</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
+                        <td>Hilton</td>
+                        <td>enquiries@hilton.com</td>
+                        <td>0114432468</td>
+                        <td>138 Rivonia Rd, Sandton</td>
+                        <td>Hotel</td>
+                        <td>South Africa</td>
 
                         <td>
                             <a href="#editServiceProviderModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
@@ -213,8 +213,11 @@ ViewData["Title"] = "DisplayServiceProvider";
                             <input type="text" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label>Field Of Expertise</label>
-                            <input type="email" class="form-control" required>
+                            <label>Type</label>
+                        <select class="form-control">
+                        <option>Hotel</option>
+                        </select>
+                            
                         </div>
                         <div class="form-group">
                             <label>Account Number</label>
@@ -258,7 +261,9 @@ ViewData["Title"] = "DisplayServiceProvider";
                         </div>
                         <div class="form-group">
                             <label>Field Of Expertise</label>
-                            <input type="email" class="form-control" required>
+                           <select class="form-control">
+                        <option>Hotel</option>
+                        </select>
                         </div>
                         <div class="form-group">
                             <label>Account Number</label>
@@ -309,7 +314,7 @@ ViewData["Title"] = "DisplayServiceProvider";
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
-                        <label>Service Provider ID: xx </label>
+                        <label>Service Provider ID:  </label>
                     </div>
                         <div class="form-group">
                             <label>Review</label>

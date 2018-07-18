@@ -22,7 +22,6 @@ ViewData["Title"] = "Order";
                     </div>
                     <div class="col-sm-6">
                       
-                    <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>
                      <a href="#finaliseInvoiceModal" class="btn btn-info" data-toggle="modal"><i class="material-icons">&#xe227;</i> <span>Finalise Invoice</span></a>
 
                 </div>
@@ -47,13 +46,15 @@ ViewData["Title"] = "Order";
                             </span>
                         </th>
                         <th> Order ID</th>
-                        <th>Expense ID</th>
-                       <th>Quantity</th>
+                        <th>Vendor </th>
                         <th>Date</th>
-                        <th>Type</th>
                         <th>Description</th>
-                   
                         <th>Status</th>
+
+                        <th>Type</th>
+                        <th>Quantity</th>
+                   
+                        
 <!--
                         <th>Branch Code</th>
                         <th>Physical Address</th>
@@ -73,20 +74,15 @@ ViewData["Title"] = "Order";
                             </span>
                         </td>
                         <td>1</td>
-                        <td>xxxxxxxxx</td>
-                        <td>xxxxxxxxx</td>
-                        <td>xxxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-
-
-
+                        <td>CNA</td>
+                        <td>2018/06/23</td>
+                        <td>General Office Supply Order</td>
+                        <td>Pending</td>
+                        <td>Pen</td>
+                        <td>3</td>
                            
                         <td>
-                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                             <a href="#finaliseorder" class="finaliseorder" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Finalise Order">&#xe876;</i></a>
+                            <a href="#finaliseorder" class="finaliseorder" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Finalise Order">&#xe876;</i></a>
                              <a href="#receiveOrderModal" class="receiveorder" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Receive Order"> &#xe861;</i></a>
 
                    
@@ -95,50 +91,46 @@ ViewData["Title"] = "Order";
                     </tr>
                     <tr>
                         <td>
-                            <span class="custom-checkbox">
+                            <!--<span class="custom-checkbox">
                                 <input type="checkbox" id="checkbox2" name="options[]" value="1">
                                 <label for="checkbox2"></label>
-                            </span>
+                            </span>-->
                         </td>
-                        <td>2</td>
-                        <td>xxxxxxxxx</td>
-                        <td>xxxxxxxxx</td>
-                        <td>xxxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td>Lever Arch Files </td>
+                        <td>7</td>
 
 
                         <td>
-                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-
-                             <a href="#finaliseorder" class="finaliseorder" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Finalise Order">&#xe876;</i></a>
+                            
+         <!--                    <a href="#finaliseorder" class="finaliseorder" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Finalise Order">&#xe876;</i></a>
                              <a href="#receiveOrderModal" class="receiveorder" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Receive Order"> &#xe861;</i></a>
-                </td>
+          -->      </td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="custom-checkbox">
+                           <!-- <span class="custom-checkbox">
                                 <input type="checkbox" id="checkbox3" name="options[]" value="1">
                                 <label for="checkbox3"></label>
-                            </span>
+                            </span>-->
                         </td>
-                        <td>3</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Laminate Sheets 1</td>
+                        <td>1</td>
 
                       
                         <td>
-                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                             <a href="#finaliseorder" class="finaliseorder" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Finalise Order">&#xe876;</i></a>
+                             <!--<a href="#finaliseorder" class="finaliseorder" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Finalise Order">&#xe876;</i></a>
                              <a href="#receiveOrderModal" class="receiveorder" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Receive Order"> &#xe861;</i></a>
-
+-->
                              </td>
                     </tr>
                     <tr>
@@ -148,45 +140,40 @@ ViewData["Title"] = "Order";
                                 <label for="checkbox4"></label>
                             </span>
                         </td>
-                        <td>4</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
+                        <td>2</td>
+                        <td>Incredible Connection</td>
+                        <td>2018/07/01</td>
+                        <td>New Printer Purchase</td>
+                        <td>Completed</td>
+                        <td>Printer</td>
+                        <td>1</td>
 
                         <td>
-                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                                                         <a href="#finaliseorder" class="finaliseorder" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Finalise Order">&#xe876;</i></a>
+                                                        <a href="#finaliseorder" class="finaliseorder" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Finalise Order">&#xe876;</i></a>
                              <a href="#receiveOrderModal" class="receiveorder" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Receive Order"> &#xe861;</i></a>
 
                             </td>
                     </tr>
                     <tr>
                         <td>
-                            <span class="custom-checkbox">
+                            <!--<span class="custom-checkbox">
                                 <input type="checkbox" id="checkbox5" name="options[]" value="1">
                                 <label for="checkbox5"></label>
-                            </span>
+                            </span>-->
                         </td>
-                        <td>5</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Printer Catridge</td>
+                        <td>2</td>
 
                        
                         <td>
-                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-
-                              <a href="#finaliseorder" class="finaliseorder" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Finalise Order">&#xe876;</i></a>
+                           <!--<a href="#finaliseorder" class="finaliseorder" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Finalise Order">&#xe876;</i></a>
                              <a href="" class="receiveorder" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Receive Order"> &#xe861;</i></a>
-                </td>                      
+               --> </td>                      
                     </tr>
                 </tbody>
             </table>
@@ -357,7 +344,7 @@ ViewData["Title"] = "Order";
                     </div>
                     <div class="modal-footer">
                         <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                        <input type="submit" class="btn btn-info" value="Save">
+                        <input type="submit" class="btn btn-info" value="Finalise">
                     </div>
                 </form>
             </div>
@@ -418,7 +405,7 @@ ViewData["Title"] = "Order";
             <div class="modal-content">
                 <form>
                     <div class="modal-header">
-                        <h4 class="modal-title">Delete Employee</h4>
+                        <h4 class="modal-title">Delete Order</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
                     <div class="modal-body">
@@ -488,6 +475,7 @@ ViewData["Title"] = "Order";
             </div>
         </div>
     </div>
+   
     <!-- Delete Modal HTML -->
     <div id="deleteEmployeeModal" class="modal fade">
         <div class="modal-dialog">
@@ -518,7 +506,7 @@ ViewData["Title"] = "Order";
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
                     <div class="modal-body">
-                        <p>Are you sure you want to finalise these Orders?</p>
+                        <p>Are you sure you want to finalise this Order?</p>
                         <p class="text-warning"><small>This action cannot be undone.</small></p>
                     </div>
                     <div class="modal-footer">

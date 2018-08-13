@@ -1,0 +1,79 @@
+@page
+@model NewGen5Razor.Pages.Vendor.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Vendors</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Vendors.VendorName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vendors.VendorName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vendors.PhysicalAddress)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vendors.PhysicalAddress)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vendors.PostalAddress)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vendors.PostalAddress)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vendors.VendorVATNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vendors.VendorVATNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vendors.AccountNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vendors.AccountNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vendors.AccountBranch)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vendors.AccountBranch)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vendors.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vendors.Email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vendors.Telephone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vendors.Telephone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vendors.PreferencedID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vendors.PreferencedID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vendors.VendorTypeID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vendors.VendorTypeID)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Vendors.VendorsID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

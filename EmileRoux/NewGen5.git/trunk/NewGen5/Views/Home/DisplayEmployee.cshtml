@@ -1,0 +1,511 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+ViewData["Title"] = "DisplayEmployee";
+}
+
+
+
+    <div class="container">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h2>Manage Employees</h2>
+                    </div>
+                    <div class="col-sm-6">
+                        <a href="#addEmployeeRequestModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span> Employee Request</span></a>
+                        <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span> New Employee</span></a>
+                        <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>
+                    </div>
+                <div class="col-sm-3">
+
+                      
+                <div class="search-box">
+                                <div class="input-group">                               
+                                    <input type="text" id="search" class="form-control" placeholder="Search Employee">
+                                    <span class="input-group-addon" style="font-size:14px;"><i class="material-icons">&#xE8B6;</i></span>
+                                  </div>
+                        </div>
+
+                    </div>
+                    
+
+
+
+                    
+                </div>  
+                </div>
+            </div>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>
+                            <span class="custom-checkbox">
+                                <input type="checkbox" id="selectAll">
+                                <label for="selectAll"></label>
+                            </span>
+                        </th>
+                        <th>ID</th>
+                        <th>First Name</th>
+                        <th>Surname</th>
+                        <th>Initials</th>
+                        <th>ID Number</th>
+                        <th>Work Telephone</th>
+                        <th>Email</th>
+                        <th>Cell Phone</th>
+                        <th>Physical Address</th>
+                        <th>Postal Address</th>
+                        <td>Actions</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <span class="custom-checkbox">
+                                <input type="checkbox" id="checkbox1" name="options[]" value="1">
+                                <label for="checkbox1"></label>
+                            </span>
+                        </td>
+                        <td>1</td>
+                        <td>Julian</td>
+                        <td>Rehbock</td>
+                        <td>J</td>
+                        <td>xxxxxxxx</td>
+                        <td>xxxxxxxx</td>
+                        <td>xxxxxxxx</td>
+                        <td>xxxxxxxx</td>
+                        <td>xxxxxxxx</td>
+                        <td>xxxxxxxx</td>
+
+
+                           
+                        <td>
+                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="custom-checkbox">
+                                <input type="checkbox" id="checkbox2" name="options[]" value="1">
+                                <label for="checkbox2"></label>
+                            </span>
+                        </td>
+                        <td>2</td>
+                        <td>Emile</td>
+                        <td>Roux</td>
+                        <td>E</td>
+                        <td>xxxxxxxx</td>
+                        <td>xxxxxxxx</td>
+                        <td>xxxxxxxx</td>
+                        <td>xxxxxxxx</td>
+                        <td>xxxxxxxx</td>
+                        <td>xxxxxxxx</td>
+
+                        <td>
+                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="custom-checkbox">
+                                <input type="checkbox" id="checkbox3" name="options[]" value="1">
+                                <label for="checkbox3"></label>
+                            </span>
+                        </td>
+                        <td>3</td>
+                        <td>Geroge</td>
+                        <td>Nichas</td>
+                        <td>G</td>
+                        <td>xxxxxxxx</td>
+                        <td>xxxxxxxx</td>
+                        <td>xxxxxxxx</td>
+                        <td>xxxxxxxx</td>
+                        <td>xxxxxxxx</td>
+                        <td>xxxxxxxx</td>
+                      
+                        <td>
+                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="custom-checkbox">
+                                <input type="checkbox" id="checkbox4" name="options[]" value="1">
+                                <label for="checkbox4"></label>
+                            </span>
+                        </td>
+                        <td>4</td>
+                        <td>Emily</td>
+                        <td>Black</td>
+                        <td>E</td>
+                        <td>xxxxxxxx</td>
+                        <td>xxxxxxxx</td>
+                        <td>xxxxxxxx</td>
+                        <td>xxxxxxxx</td>
+                        <td>xxxxxxxx</td>
+                        <td>xxxxxxxx</td>
+                      
+                        <td>
+                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="custom-checkbox">
+                                <input type="checkbox" id="checkbox5" name="options[]" value="1">
+                                <label for="checkbox5"></label>
+                            </span>
+                        </td>
+                        <td>5</td>
+                        <td>Dane</td>
+                        <td>Coetzee</td>
+                        <td>D</td>
+                        <td>xxxxxxxx</td>
+                        <td>xxxxxxxx</td>
+                        <td>xxxxxxxx</td>
+                        <td>xxxxxxxx</td>
+                        <td>xxxxxxxx</td>
+                        <td>xxxxxxxx</td>
+                       
+                        <td>
+                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                        </td>                      
+                    </tr>
+                </tbody>
+            </table>
+            <div class="clearfix">
+                <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+                <ul class="pagination">
+                    <li class="page-item disabled"><a href="#">Previous</a></li>
+                    <li class="page-item"><a href="#" class="page-link">1</a></li>
+                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                    <li class="page-item active"><a href="#" class="page-link">3</a></li>
+                    <li class="page-item"><a href="#" class="page-link">4</a></li>
+                    <li class="page-item"><a href="#" class="page-link">5</a></li>
+                    <li class="page-item"><a href="#" class="page-link">Next</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- AddEmployee Modal HTML -->
+    <div id="addEmployeeModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">
+                        <h4 class="modal-title">Add Employee</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Surname</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Initials</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>ID Number</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Work Phone</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Adress</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Cell Phone</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Physical Address</label>
+                            <textarea class="form-control" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Postal Address</label>
+                            <textarea class="form-control" required></textarea>
+                        </div>
+                    <div class="form-group">
+                            <label>Assign Department</label>
+                            <select class="form-control">
+                            <option>IT</option>
+                            <option>Finance</option>
+                            <option>Law</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                        <input type="submit" class="btn btn-success" value="Add">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--Add Employee Request-->
+    <!--<div id="addEmployeeRequestModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">
+                        <h4 class="modal-title">Add Employee Request</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Employee ID</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Expense Type</label>
+                            <select class="form-control" required>
+                                <option>Expense Type 1</option>
+                                <option>Expense Type 2</option>
+                                <option>Expense Type 3</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Date Requested:</label>
+                            <input class="form-control" id="date" name="date" type="date" />
+                        </div>
+           
+                        <div class="form-group">
+                            <label>Quantity</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                    <div class="form-group">
+                            <label>Document</label>
+                            <input type="file" class="form-control">
+                        </div>
+                        <div class="modal-footer">
+                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                            <input type="submit" class="btn btn-success" value="Add Request">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>-->
+    <!-- Edit Modal HTML -->
+    <div id="editEmployeeModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">
+                        <h4 class="modal-title">Edit Employee</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Surname</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Initials</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>ID Number</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Work Telephone</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Cell Phone</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Physical Address</label>
+                            <textarea class="form-control" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Postal Address</label>
+                            <textarea class="form-control" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Department</label>
+                            <select class="form-control" requireed>
+                             <option>Finance</option>
+                                <option>Lawyer</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                        <input type="submit" class="btn btn-info" value="Save">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Delete Modal HTML -->
+    <div id="deleteEmployeeModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">
+                        <h4 class="modal-title">Delete Employee</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you want to delete these Records?</p>
+                        <p class="text-warning"><small>This action cannot be undone.</small></p>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                        <input type="submit" class="btn btn-danger" value="Delete">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+ 
+ <div id="addEmployeeRequestModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">
+                        <h4 class="modal-title">Add Employee Request</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                    <div class="form-group">
+                            <label>Employee ID</label>
+                        <input type="text" class="form-control" readonly="true" value="1">
+                        </div>
+                    <div align="center">
+                          <div class="btn-info btn-group btn-group-toggle" data-toggle="buttons">
+  <label class="btn btn-secondary active">
+    <input type="radio" name="options" class="form-control" id="option1" autocomplete="off" checked>Stationary
+  </label>
+  <label class="btn btn-secondary">
+    <input type="radio" name="options" class="form-control" id="option2" autocomplete="off"> Consumables
+  </label>
+   <label class="btn btn-secondary">
+    <input type="radio" name="options" class="form-control" id="option2" autocomplete="off"> Reimbursement
+  </label>
+
+
+</div>
+                        </div>
+
+                    <div class="form-group">
+                            <label>Type</label>
+                            <select class="form-control">
+                            <option>Accomodation</option>
+                            <option>Plane Ticket</option>
+                            <option>----</option>
+                             <option>Pencil</option>
+                             <option>Pen</option>
+                             <option>----</option>
+                             <option>Printer Catridge</option>
+                             <option>Coffee</option>
+                            
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Description</label>
+                            <textarea class="form-control" rows="3" id="comment"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Quantity</label>
+                            <input type="number" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Date</label>
+                            <input type="date" class="form-control" required>
+                        </div>
+                    <hr/>
+                    <p class="text-muted"><small>* Also complete if reimbursement</small></p>
+                    <div class="form-group">
+                    <label>Reimbursement Amount</label>
+                        <input type="number" class="form-control"/>
+
+                    </div>
+                     <div class="form-group">
+                            <label>Proof of Payment</label>
+                            <input type="file" class="form-control">
+                        </div>
+                    <div class="form-group">
+                            <label>Service Provider</label>
+                            <select class="form-control">
+                            <option>Hilton</option>
+                            <option>Safair</option>
+
+                            
+                            </select>
+                        </div>
+                    <div class="from-group">
+                        <a class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i></a>
+                       
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <br/>
+                    <label><b>Line Items</b></label>
+                        <table class="table table-sm">
+                            <tr>
+                            <th>S/C/R</th>
+                            <th>Type</th>
+                            <th>Quantity</th>
+                            <th>Amount</th>
+                                </tr>
+                            <tr>
+                                <td>S</td>
+                                <td>Pencil</td>
+                                <td>5</td>
+                                <td>-</td>
+                             </tr>
+                            <tr>
+                                <td>R</td>
+                                <td>Accomodation</td>
+                                <td>1</td>
+                                <td>1200</td>
+                             </tr>
+                          
+                        </table>
+
+                    </div>
+                    
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                        <input type="submit" class="btn btn-success" value="Place Request">
+                    </div>
+                 
+                </form>
+            </div>
+        </div>
+    </div>
+                       
+
+

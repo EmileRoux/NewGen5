@@ -1,0 +1,170 @@
+@page
+@model NewGen5Razor.Pages.Vendor.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "_Withoutmenu";
+}
+<script type="text/javascript">
+$('')
+
+
+</script>
+
+
+
+    <div class="col-md-4">
+        <form method="post">
+            <div class="modal-header">
+                <h4 class="modal-title">Edit Vendor</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Vendors.VendorsID" />
+                <div class="form-group">
+                    <label asp-for="Vendors.VendorName" class="control-label"></label>
+                    <input asp-for="Vendors.VendorName" class="form-control" />
+                    <span asp-validation-for="Vendors.VendorName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Vendors.PhysicalAddress" class="control-label"></label>
+                    <input asp-for="Vendors.PhysicalAddress" class="form-control" />
+                    <span asp-validation-for="Vendors.PhysicalAddress" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Vendors.PostalAddress" class="control-label"></label>
+                    <input asp-for="Vendors.PostalAddress" class="form-control" />
+                    <span asp-validation-for="Vendors.PostalAddress" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Vendors.VendorVATNumber" class="control-label"></label>
+                    <input asp-for="Vendors.VendorVATNumber" class="form-control" />
+                    <span asp-validation-for="Vendors.VendorVATNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Vendors.AccountNumber" class="control-label"></label>
+                    <input asp-for="Vendors.AccountNumber" class="form-control" />
+                    <span asp-validation-for="Vendors.AccountNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Vendors.AccountBranch" class="control-label"></label>
+                    <input asp-for="Vendors.AccountBranch" class="form-control" />
+                    <span asp-validation-for="Vendors.AccountBranch" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Vendors.Email" class="control-label"></label>
+                    <input asp-for="Vendors.Email" class="form-control" />
+                    <span asp-validation-for="Vendors.Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Vendors.Telephone" class="control-label"></label>
+                    <input asp-for="Vendors.Telephone" class="form-control" />
+                    <span asp-validation-for="Vendors.Telephone" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Vendors.PreferencedID" class="control-label"></label>
+                    <input asp-for="Vendors.PreferencedID" class="form-control" />
+                    <span asp-validation-for="Vendors.PreferencedID" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Vendors.VendorTypeID" class="control-label"></label>
+                    <input asp-for="Vendors.VendorTypeID" class="form-control" />
+                    <span asp-validation-for="Vendors.VendorTypeID" class="text-danger"></span>
+                </div>
+
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                    <input type="submit" class="btn btn-success" id="submitbtn" value="Edit" asp-route-id="1">
+                </div>
+        </form>
+</div>
+      
+
+    @*<div>
+        <a asp-page="./Index">Back to List</a>
+    </div>*@
+
+
+
+@*<div class="row">
+<div id="editVendorModal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="post">
+                <div class="modal-header">
+                    <h4 class="modal-title">Edit Vendor</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="Vendors.VendorsID" />
+                    <div class="form-group">
+                        <label asp-for="Vendors.VendorName" class="control-label"></label>
+                        <input asp-for="Vendors.VendorName" class="form-control" />
+                        <span asp-validation-for="Vendors.VendorName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Vendors.PhysicalAddress" class="control-label"></label>
+                        <input asp-for="Vendors.PhysicalAddress" class="form-control" />
+                        <span asp-validation-for="Vendors.PhysicalAddress" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Vendors.PostalAddress" class="control-label"></label>
+                        <input asp-for="Vendors.PostalAddress" class="form-control" />
+                        <span asp-validation-for="Vendors.PostalAddress" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Vendors.VendorVATNumber" class="control-label"></label>
+                        <input asp-for="Vendors.VendorVATNumber" class="form-control" />
+                        <span asp-validation-for="Vendors.VendorVATNumber" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Vendors.AccountNumber" class="control-label"></label>
+                        <input asp-for="Vendors.AccountNumber" class="form-control" value="" />
+                        <span asp-validation-for="Vendors.AccountNumber" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Vendors.AccountBranch" class="control-label"></label>
+                        <input asp-for="Vendors.AccountBranch" class="form-control" />
+                        <span asp-validation-for="Vendors.AccountBranch" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Vendors.Email" class="control-label"></label>
+                        <input asp-for="Vendors.Email" class="form-control" />
+                        <span asp-validation-for="Vendors.Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Vendors.Telephone" class="control-label"></label>
+                        <input asp-for="Vendors.Telephone" class="form-control" />
+                        <span asp-validation-for="Vendors.Telephone" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Vendors.PreferencedID" class="control-label"></label>
+                        <input asp-for="Vendors.PreferencedID" class="form-control" />
+                        <span asp-validation-for="Vendors.PreferencedID" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Vendors.VendorTypeID" class="control-label"></label>
+                        <input asp-for="Vendors.VendorTypeID" class="form-control" />
+                        <span asp-validation-for="Vendors.VendorTypeID" class="text-danger"></span>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                    <input type="submit" class="btn btn-success" value="Edit" asp-page-handler="Second">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+    </div>*@
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+

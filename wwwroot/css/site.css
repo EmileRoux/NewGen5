@@ -1,0 +1,543 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 20px
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none
+    }
+}
+/*body {
+    color: #566787;
+    background: #f5f5f5;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 13px
+}*/
+
+
+.table-wrapper {
+    background: #fff;
+    padding: 20px 25px;
+    margin: 30px 0;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.05)
+}
+
+.table-title {
+    padding-bottom: 15px;
+    background: #393a3a;
+    color: #fff;
+    padding: 16px 30px;
+    margin: -20px -25px 10px;
+    border-radius: 3px 3px 0 0
+}
+
+    .table-title h2 {
+        margin: 5px 0 0;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .table-title .btn-group {
+        float: right
+    }
+
+    .table-title .btn {
+        color: #fff;
+        float: right;
+        font-size: 13px;
+        border: none;
+        min-width: 50px;
+        border-radius: 2px;
+        border: none;
+        outline: none !important;
+        margin-left: 10px
+    }
+
+        .table-title .btn i {
+            float: left;
+            font-size: 21px;
+            margin-right: 5px
+        }
+
+        .table-title .btn span {
+            float: left;
+            margin-top: 2px
+        }
+
+table.table tr th, table.table tr td {
+    border-color: #e9e9e9;
+    padding: 12px 15px;
+    vertical-align: middle;
+    font-size: 12px;
+}
+
+    table.table tr th:first-child {
+        width: 60px
+    }
+
+    table.table tr th:last-child {
+        width: 100px
+    }
+
+table.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #fcfcfc
+}
+
+table.table-striped.table-hover tbody tr:hover {
+    background: #f5f5f5
+}
+
+table.table th i {
+    font-size: 13px;
+    margin: 0 5px;
+    cursor: pointer
+}
+
+table.table td:last-child i {
+    opacity: 0.9;
+    font-size: 22px;
+    margin: 0 5px
+}
+
+table.table td a {
+    font-weight: bold;
+    color: #566787;
+    display: inline-block;
+    text-decoration: none;
+    outline: none !important
+}
+
+    table.table td a:hover {
+        color: #2196F3
+    }
+
+table.table td a {
+    color: #373838;
+}
+
+/*table.table td a.delete {
+        color: #F44336
+    }*/
+
+table.table td i {
+    font-size: 19px
+}
+
+table.table .avatar {
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 10px
+}
+
+.pagination {
+    float: right;
+    margin: 0 0 5px
+}
+
+    .pagination li a {
+        border: none;
+        font-size: 13px;
+        min-width: 30px;
+        min-height: 30px;
+        color: #999;
+        margin: 0 2px;
+        line-height: 30px;
+        border-radius: 2px !important;
+        text-align: center;
+        padding: 0 6px
+    }
+
+        .pagination li a:hover {
+            color: #666
+        }
+
+    .pagination li.active a, .pagination li.active a.page-link {
+        background: #B00829
+    }
+
+        .pagination li.active a:hover {
+            background: ##5f5f5f
+        }
+
+    .pagination li.disabled i {
+        color: #ccc
+    }
+
+    .pagination li i {
+        font-size: 16px;
+        padding-top: 6px
+    }
+
+.hint-text {
+    float: left;
+    margin-top: 10px;
+    font-size: 13px
+}
+
+/* Custom checkbox */
+.custom-checkbox {
+    position: relative
+}
+
+    .custom-checkbox input[type="checkbox"] {
+        opacity: 0;
+        position: absolute;
+        margin: 5px 0 0 3px;
+        z-index: 9
+    }
+
+    .custom-checkbox label:before {
+        width: 18px;
+        height: 18px
+    }
+
+    .custom-checkbox label:before {
+        content: '';
+        margin-right: 10px;
+        display: inline-block;
+        vertical-align: text-top;
+        background: white;
+        border: 1px solid #bbb;
+        border-radius: 2px;
+        box-sizing: border-box;
+        z-index: 2
+    }
+
+    .custom-checkbox input[type="checkbox"]:checked + label:after {
+        content: '';
+        position: absolute;
+        left: 6px;
+        top: 3px;
+        width: 6px;
+        height: 11px;
+        border: solid #000;
+        border-width: 0 3px 3px 0;
+        transform: inherit;
+        z-index: 3;
+        transform: rotateZ(45deg)
+    }
+
+    .custom-checkbox input[type="checkbox"]:checked + label:before {
+        border-color: #03A9F4;
+        background: #03A9F4
+    }
+
+    .custom-checkbox input[type="checkbox"]:checked + label:after {
+        border-color: #fff
+    }
+
+    .custom-checkbox input[type="checkbox"]:disabled + label:before {
+        color: #b8b8b8;
+        cursor: auto;
+        box-shadow: none;
+        background: #ddd
+    }
+
+/* Modal styles */
+.modal .modal-dialog {
+    max-width: 400px
+}
+
+.modal .modal-header, .modal .modal-body, .modal .modal-footer {
+    padding: 20px 30px
+}
+
+.modal .modal-content {
+    border-radius: 3px
+}
+
+.modal .modal-footer {
+    background: #ecf0f1;
+    border-radius: 0 0 3px 3px
+}
+
+.modal .modal-title {
+    display: inline-block
+}
+
+.modal .form-control {
+    border-radius: 2px;
+    box-shadow: none;
+    border-color: #dddddd
+}
+
+.modal textarea.form-control {
+    resize: vertical
+}
+
+.modal .btn {
+    border-radius: 2px;
+    min-width: 100px
+}
+
+.modal form label {
+    font-weight: normal
+}
+
+.cssload-weird div {
+    background-color: transparent;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    box-shadow: 0px 10px rgb(252,0,0), 0px -10px rgb(194,2,2);
+    -o-box-shadow: 0px 10px rgb(252,0,0), 0px -10px rgb(194,2,2);
+    -ms-box-shadow: 0px 10px rgb(252,0,0), 0px -10px rgb(194,2,2);
+    -webkit-box-shadow: 0px 10px rgb(252,0,0), 0px -10px rgb(194,2,2);
+    -moz-box-shadow: 0px 10px rgb(252,0,0), 0px -10px rgb(194,2,2);
+    animation: cssload-rotate2 9.2s infinite linear;
+    -o-animation: cssload-rotate2 9.2s infinite linear;
+    -ms-animation: cssload-rotate2 9.2s infinite linear;
+    -webkit-animation: cssload-rotate2 9.2s infinite linear;
+    -moz-animation: cssload-rotate2 9.2s infinite linear
+}
+
+    .cssload-weird div:nth-child(2) {
+        box-shadow: 0px -19px rgb(138,10,10), 0px 19px rgb(107,9,0);
+        -o-box-shadow: 0px -19px rgb(138,10,10), 0px 19px rgb(107,9,0);
+        -ms-box-shadow: 0px -19px rgb(138,10,10), 0px 19px rgb(107,9,0);
+        -webkit-box-shadow: 0px -19px rgb(138,10,10), 0px 19px rgb(107,9,0);
+        -moz-box-shadow: 0px -19px rgb(138,10,10), 0px 19px rgb(107,9,0);
+        animation: cssload-rotate 8.63s infinite linear;
+        -o-animation: cssload-rotate 8.63s infinite linear;
+        -ms-animation: cssload-rotate 8.63s infinite linear;
+        -webkit-animation: cssload-rotate 8.63s infinite linear;
+        -moz-animation: cssload-rotate 8.63s infinite linear
+    }
+
+    .cssload-weird div:nth-child(3) {
+        box-shadow: 0px 29px rgb(0,0,0), 0px -29px rgb(41,35,35);
+        -o-box-shadow: 0px 29px rgb(0,0,0), 0px -29px rgb(41,35,35);
+        -ms-box-shadow: 0px 29px rgb(0,0,0), 0px -29px rgb(41,35,35);
+        -webkit-box-shadow: 0px 29px rgb(0,0,0), 0px -29px rgb(41,35,35);
+        -moz-box-shadow: 0px 29px rgb(0,0,0), 0px -29px rgb(41,35,35);
+        animation: cssload-rotate2 8.05s infinite linear;
+        -o-animation: cssload-rotate2 8.05s infinite linear;
+        -ms-animation: cssload-rotate2 8.05s infinite linear;
+        -webkit-animation: cssload-rotate2 8.05s infinite linear;
+        -moz-animation: cssload-rotate2 8.05s infinite linear
+    }
+
+    .cssload-weird div:nth-child(4) {
+        box-shadow: 0px -39px rgb(56,44,43), 0px 39px rgb(87,82,82);
+        -o-box-shadow: 0px -39px rgb(56,44,43), 0px 39px rgb(87,82,82);
+        -ms-box-shadow: 0px -39px rgb(56,44,43), 0px 39px rgb(87,82,82);
+        -webkit-box-shadow: 0px -39px rgb(56,44,43), 0px 39px rgb(87,82,82);
+        -moz-box-shadow: 0px -39px rgb(56,44,43), 0px 39px rgb(87,82,82);
+        animation: cssload-rotate 7.48s infinite linear;
+        -o-animation: cssload-rotate 7.48s infinite linear;
+        -ms-animation: cssload-rotate 7.48s infinite linear;
+        -webkit-animation: cssload-rotate 7.48s infinite linear;
+        -moz-animation: cssload-rotate 7.48s infinite linear
+    }
+
+    .cssload-weird div:nth-child(5) {
+        box-shadow: 0px 49px rgb(117,112,112), 0px -49px rgb(181,177,177);
+        -o-box-shadow: 0px 49px rgb(117,112,112), 0px -49px rgb(181,177,177);
+        -ms-box-shadow: 0px 49px rgb(117,112,112), 0px -49px rgb(181,177,177);
+        -webkit-box-shadow: 0px 49px rgb(117,112,112), 0px -49px rgb(181,177,177);
+        -moz-box-shadow: 0px 49px rgb(117,112,112), 0px -49px rgb(181,177,177);
+        animation: cssload-rotate2 6.9s infinite linear;
+        -o-animation: cssload-rotate2 6.9s infinite linear;
+        -ms-animation: cssload-rotate2 6.9s infinite linear;
+        -webkit-animation: cssload-rotate2 6.9s infinite linear;
+        -moz-animation: cssload-rotate2 6.9s infinite linear
+    }
+
+
+
+@keyframes cssload-rotate {
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@-o-keyframes cssload-rotate {
+    100% {
+        -o-transform: rotate(360deg)
+    }
+}
+
+@-ms-keyframes cssload-rotate {
+    100% {
+        -ms-transform: rotate(360deg)
+    }
+}
+
+@-webkit-keyframes cssload-rotate {
+    100% {
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+@-moz-keyframes cssload-rotate {
+    100% {
+        -moz-transform: rotate(360deg)
+    }
+}
+
+@keyframes cssload-rotate2 {
+    100% {
+        transform: rotate(-360deg)
+    }
+}
+
+@-o-keyframes cssload-rotate2 {
+    100% {
+        -o-transform: rotate(-360deg)
+    }
+}
+
+@-ms-keyframes cssload-rotate2 {
+    100% {
+        -ms-transform: rotate(-360deg)
+    }
+}
+
+@-webkit-keyframes cssload-rotate2 {
+    100% {
+        -webkit-transform: rotate(-360deg)
+    }
+}
+
+@-moz-keyframes cssload-rotate2 {
+    100% {
+        -moz-transform: rotate(-360deg)
+    }
+}
+
+.search-container {
+    float: right;
+    margin-top: 20px;
+}
+
+    .search-container input[type=text] {
+        padding: 6px;
+        margin-top: 8px;
+        font-size: 12px;
+        border: 1px #F00;
+    }
+
+    .search-container button {
+        float: right;
+        padding: 6px 10px;
+        margin-top: 8px;
+        margin-right: 16px;
+        background: #ddd;
+        font-size: 12px;
+        border: none;
+        cursor: pointer
+    }
+
+        .search-container button:hover {
+            background: #ccc
+        }
+
+@media screen and (max-width: 600px) {
+    .search-container {
+        float: none
+    }
+
+        .search-container input[type=text], .search-container button {
+            float: none;
+            display: block;
+            text-align: left;
+            width: 100%;
+            margin: 0;
+            padding: 14px
+        }
+
+        .search-container input[type=text] {
+            border: 1px solid #ccc
+        }
+
+    .material-icons i:hover {
+        color: B00829
+    }
+
+    .search-box {
+        position: relative;
+        float: right
+    }
+
+        .search-box .input-group {
+            min-width: 100px;
+            position: absolute;
+            right: 0
+        }
+
+        .search-box .input-group-addon, .search-box input {
+            border-color: #ddd;
+            border-radius: 0
+        }
+
+        .search-box input {
+            height: 30px;
+            padding-right: 35px;
+            background: #f4fcfd;
+            border: none;
+            border-radius: 2px !important
+        }
+
+            .search-box input:focus {
+                background: #fff
+            }
+
+            .search-box input::placeholder {
+                font-style: italic
+            }
+
+        .search-box .input-group-addon {
+            min-width: 35px;
+            border: none;
+            background: transparent;
+            position: absolute;
+            right: 0;
+            z-index: 9;
+            padding: 6px 0
+        }
+
+        .search-box i {
+            color: #a0a5b1;
+            font-size: 14px;
+            position: relative;
+            top: 2px
+        }
+        .search-box button
+        {
+            display:inline-block;
+            height:100px;
+        }
+
+    .form-inline > * {
+        margin: 15px 6px !important
+    }

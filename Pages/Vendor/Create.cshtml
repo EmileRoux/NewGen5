@@ -1,0 +1,79 @@
+@page
+@model NewGen5Razor.Pages.Vendor.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Vendors</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Vendors.VendorName" class="control-label"></label>
+                <input asp-for="Vendors.VendorName" class="form-control" />
+                <span asp-validation-for="Vendors.VendorName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vendors.PhysicalAddress" class="control-label"></label>
+                <input asp-for="Vendors.PhysicalAddress" class="form-control" />
+                <span asp-validation-for="Vendors.PhysicalAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vendors.PostalAddress" class="control-label"></label>
+                <input asp-for="Vendors.PostalAddress" class="form-control" />
+                <span asp-validation-for="Vendors.PostalAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vendors.VendorVATNumber" class="control-label"></label>
+                <input asp-for="Vendors.VendorVATNumber" class="form-control" />
+                <span asp-validation-for="Vendors.VendorVATNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vendors.AccountNumber" class="control-label"></label>
+                <input asp-for="Vendors.AccountNumber" class="form-control" />
+                <span asp-validation-for="Vendors.AccountNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vendors.AccountBranch" class="control-label"></label>
+                <input asp-for="Vendors.AccountBranch" class="form-control" />
+                <span asp-validation-for="Vendors.AccountBranch" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vendors.Email" class="control-label"></label>
+                <input asp-for="Vendors.Email" class="form-control" />
+                <span asp-validation-for="Vendors.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vendors.Telephone" class="control-label"></label>
+                <input asp-for="Vendors.Telephone" class="form-control" />
+                <span asp-validation-for="Vendors.Telephone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vendors.PreferencedID" class="control-label"></label>
+                <input asp-for="Vendors.PreferencedID" class="form-control" />
+                <span asp-validation-for="Vendors.PreferencedID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vendors.VendorTypeID" class="control-label"></label>
+                <input asp-for="Vendors.VendorTypeID" class="form-control" />
+                <span asp-validation-for="Vendors.VendorTypeID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

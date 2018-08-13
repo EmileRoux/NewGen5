@@ -1,0 +1,565 @@
+@page
+@model NewGen5Razor.Pages.Vendor.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="container">
+
+    <div class="row">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h2>Manage Vendors</h2>
+                    </div>
+                    <div class="col-sm-6">
+                        <a href="#placeOrderModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Place Vendor Order</span></a>
+                        @*<a asp-page="Create" class="btn btn-success"><i class="material-icons">&#xE147;</i> <span>Add New Vendor</span></a>*@
+                        <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Vendor</span></a>
+                        
+                        <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>
+
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="search-box">
+                            <form>
+                            <div class="input-group">
+                                <input type="text" id="search" class="form-control" placeholder="Search Vendor" name="SearchString">
+                                <span class="input-group-addon" style="font-size:14px;" onclick="$(this).closest('form').submit();"><i class="material-icons">&#xE8B6;</i></span>
+                            </div>
+                                </form>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <table class="table table-striped table-hover table-sm ">
+            <thead>
+                <tr>
+                    <td></td>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Vendors[0].VendorName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Vendors[0].PhysicalAddress)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Vendors[0].PostalAddress)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Vendors[0].VendorVATNumber)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Vendors[0].AccountNumber)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Vendors[0].AccountBranch)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Vendors[0].Email)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Vendors[0].Telephone)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Vendors[0].PreferencedID)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Vendors[0].VendorTypeID)
+                    </th>
+                    <td>Actions</td>
+                </tr>
+            </thead>
+            <tbody>
+                 @foreach (var item in Model.Vendors)
+        {
+            <tr>
+                <td>
+                    <span class="custom-checkbox">
+                        <input type="checkbox" id="checkbox1" name="options[]" value="@item.VendorsID">
+                        <label for="checkbox1"></label>
+                    </span>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VendorName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhysicalAddress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PostalAddress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VendorVATNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AccountNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AccountBranch)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telephone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PreferencedID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VendorTypeID)
+                </td>
+                <td> 
+                    
+                    @*<a href="#editVendorModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>*@ 
+                    <a asp-page="./Edit" asp-route-id="@item.VendorsID" data-target="#editVendorModal" data-toggle="modal"><i class="material-icons"  data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                   
+
+                    @*<a asp-page="./Details" asp-route-id="@item.VendorsID">Details</a>*@
+        <a asp-page="./Delete" asp-route-id="@item.VendorsID"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+        <a href="#preferredModal" class="" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Mark as Preferred">&#xe885;</i></a>
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+
+                </table>
+                <div class="clearfix">
+                    <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+                    <ul class="pagination">
+                        <li class="page-item disabled"><a href="#">Previous</a></li>
+                        <li class="page-item"><a href="#" class="page-link">1</a></li>
+                        <li class="page-item"><a href="#" class="page-link">2</a></li>
+                        <li class="page-item active"><a href="#" class="page-link">3</a></li>
+                        <li class="page-item"><a href="#" class="page-link">4</a></li>
+                        <li class="page-item"><a href="#" class="page-link">5</a></li>
+                        <li class="page-item"><a href="#" class="page-link">Next</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- AddEmployee Modal HTML -->
+            <div id="addEmployeeModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form method="post">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Add Vendor</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <div class="form-group">
+                                    <label asp-for="TheVendors.VendorName" class="control-label"></label>
+                                    <input asp-for="TheVendors.VendorName" class="form-control" required />
+                                    <span asp-validation-for="TheVendors.VendorName" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="TheVendors.PhysicalAddress" class="control-label"></label>
+                                    <input asp-for="TheVendors.PhysicalAddress" class="form-control" required />
+                                    <span asp-validation-for="TheVendors.PhysicalAddress" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="TheVendors.PostalAddress" class="control-label"></label>
+                                    <input asp-for="TheVendors.PostalAddress" class="form-control" required />
+                                    <span asp-validation-for="TheVendors.PostalAddress" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="TheVendors.VendorVATNumber" class="control-label"></label>
+                                    <input asp-for="TheVendors.VendorVATNumber" class="form-control" />
+                                    <span asp-validation-for="TheVendors.VendorVATNumber" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="TheVendors.AccountNumber" class="control-label"></label>
+                                    <input asp-for="TheVendors.AccountNumber" class="form-control" required />
+                                    <span asp-validation-for="TheVendors.AccountNumber" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="TheVendors.AccountBranch" class="control-label"></label>
+                                    <input asp-for="TheVendors.AccountBranch" class="form-control" required  />
+                                    <span asp-validation-for="TheVendors.AccountBranch" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="TheVendors.Email" class="control-label"></label>
+                                    <input asp-for="TheVendors.Email" class="form-control" required />
+                                    <span asp-validation-for="TheVendors.Email" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="TheVendors.Telephone" class="control-label"></label>
+                                    <input asp-for="TheVendors.Telephone" class="form-control" required />
+                                    <span asp-validation-for="TheVendors.Telephone" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="TheVendors.PreferencedID" class="control-label"></label>
+                                    <input asp-for="TheVendors.PreferencedID" class="form-control" required />
+                                    <span asp-validation-for="TheVendors.PreferencedID" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="TheVendors.VendorTypeID" class="control-label"></label>
+                                    <input asp-for="TheVendors.VendorTypeID" class="form-control" required />
+                                    <span asp-validation-for="TheVendors.VendorTypeID" class="text-danger"></span>
+                                </div>
+
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                            <input type="submit" class="btn btn-success" value="Add" asp-page-handler="First">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!--Place Order-->
+        <div id="placeOrderModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form>
+                        <div class="modal-header">
+                            <h4 class="modal-title">Place Order</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label>Employee Request</label>
+                                <select class="form-control">
+                                    <option>None</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Order Description</label>
+                                <textarea class="form-control" rows="3" id="comment"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Date Ordered</label>
+                                <input type="date" class="form-control" required>
+                            </div>
+
+                            <hr />>
+                            <div align="center">
+                                <div class="btn-info btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-secondary active">
+                                        <input type="radio" name="options" class="form-control" id="option1" autocomplete="off" checked>Stationary
+                                    </label>
+                                    <label class="btn btn-secondary">
+                                        <input type="radio" name="options" class="form-control" id="option2" autocomplete="off"> Consumables
+                                    </label>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Type</label>
+                                <select class="form-control">
+                                    <option>Pen</option>
+                                    <option>Paper</option>
+                                    <option>----</option>
+                                    <option>Printer Cartride</option>
+                                    <option>Printer</option>
+                                </select>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label>Quantity</label>
+                                <input type="number" class="form-control" required>
+                            </div>
+
+                            <div class="from-group">
+                                <a class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i></a>
+                                <!--  <a class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i></a>-->
+
+
+                            </div>
+
+
+                            <div class="form-group">
+                                <br />
+                                <label><b>Line Items</b></label>
+                                <table class="table">
+                                    <tr>
+                                        <th>S/C</th>
+                                        <th>Type</th>
+                                        <th>Quantity</th>
+                                    </tr>
+                                    <tr>
+                                        <td>X</td>
+                                        <td>XXXX</td>
+                                        <td>XX</td>
+                                    </tr>
+
+                                </table>
+
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                            <input type="submit" class="btn btn-success" value="Place Order">
+                        </div>
+
+
+
+
+
+
+                        <!--<div class="form-group">
+                            <label>Employee ID</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Expense Type</label>
+                            <select class="form-control" required>
+                                <option>Expense Type 1</option>
+                                <option>Expense Type 2</option>
+                                <option>Expense Type 3</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Date Requested:</label>
+                            <input class="form-control" id="date" name="date" placeholder="DD/MM/YYY" type="text" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Quantity</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                            <input type="submit" class="btn btn-success" value="Add Request">
+                        </div>-->
+                </div>
+                </form>
+            </div>
+        </div>
+            </div>
+
+
+        <!--Place Order-->
+        <div id="addEmployeeRequestModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form>
+                        <div class="modal-header">
+                            <h4 class="modal-title">Add Employee Request</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label>Vendor Name</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Vendor Name</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input type="tel" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Field of Expertise</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>VAT Number</label>
+                                <input type="number" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Account Number</label>
+                                <input type="number" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Branch Code</label>
+                                <input type="number" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Physical Address</label>
+                                <textarea class="form-control" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Postal Address</label>
+                                <textarea class="form-control" required></textarea>
+                            </div>
+
+
+                        </div>-->
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Preferred Modal HTML -->
+
+        <div id="preferredModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form>
+                        <div class="modal-header">
+                            <h4 class="modal-title">Preference Type</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body">
+
+                            <div class="form-group">
+                                <label>Mark as</label>
+                                <select class="form-control">
+                                    <option>Preferred</option>
+                                    <option>Blacklisted</option>
+
+
+                                </select>
+                            </div>
+
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                            <input type="submit" class="btn btn-success" value="Submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- Edit Modal HTML -->
+        <div id="editVendorModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    @*
+
+            <form method="post">
+                <div class="modal-header">
+                    <h4 class="modal-title">Edit Vendor</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+
+                                <div class="modal-body">
+
+                                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                        <input type="hidden" asp-for="TheVendors.VendorsID" />
+                                        <div class="form-group">
+                                            <label asp-for="TheVendors.VendorName" class="control-label"></label>
+                                            <input asp-for="TheVendors.VendorName" class="form-control"/>
+                                            <span asp-validation-for="TheVendors.VendorName" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="TheVendors.PhysicalAddress" class="control-label"></label>
+                                            <input asp-for="TheVendors.PhysicalAddress" class="form-control" />
+                                            <span asp-validation-for="TheVendors.PhysicalAddress" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="TheVendors.PostalAddress" class="control-label"></label>
+                                            <input asp-for="TheVendors.PostalAddress" class="form-control" />
+                                            <span asp-validation-for="TheVendors.PostalAddress" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="TheVendors.VendorVATNumber" class="control-label"></label>
+                                            <input asp-for="TheVendors.VendorVATNumber" class="form-control" />
+                                            <span asp-validation-for="TheVendors.VendorVATNumber" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="TheVendors.AccountNumber" class="control-label"></label>
+                                            <input asp-for="TheVendors.AccountNumber" class="form-control" value=""/>
+                                            <span asp-validation-for="TheVendors.AccountNumber" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="TheVendors.AccountBranch" class="control-label"></label>
+                                            <input asp-for="TheVendors.AccountBranch" class="form-control" />
+                                            <span asp-validation-for="TheVendors.AccountBranch" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="TheVendors.Email" class="control-label"></label>
+                                            <input asp-for="TheVendors.Email" class="form-control" />
+                                            <span asp-validation-for="TheVendors.Email" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="TheVendors.Telephone" class="control-label"></label>
+                                            <input asp-for="TheVendors.Telephone" class="form-control" />
+                                            <span asp-validation-for="TheVendors.Telephone" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="TheVendors.PreferencedID" class="control-label"></label>
+                                            <input asp-for="TheVendors.PreferencedID" class="form-control" />
+                                            <span asp-validation-for="TheVendors.PreferencedID" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="TheVendors.VendorTypeID" class="control-label"></label>
+                                            <input asp-for="TheVendors.VendorTypeID" class="form-control" />
+                                            <span asp-validation-for="TheVendors.VendorTypeID" class="text-danger"></span>
+                                        </div>
+
+        </div>
+                                    <div class="modal-footer">
+                                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                                        <input type="submit" class="btn btn-success" value="Edit" asp-page-handler="Second">
+                                    </div>
+
+                            </form>
+                    *@
+                    Loading...
+                </div>
+
+                               
+        </div>
+                        </div>
+                        <!-- Delete Modal HTML -->
+                        <div id="deleteEmployeeModal" class="modal fade">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <form>
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Delete Vendor</h4>
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Are you sure you want to delete these Records?</p>
+                                            <p class="text-warning"><small>This action cannot be undone.</small></p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                                            <input type="submit" class="btn btn-danger" value="Delete">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+
+
+
+
+                        </div>
+
+
+
+
+
+
+
+
